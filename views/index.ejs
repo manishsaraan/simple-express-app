@@ -1,10 +1,12 @@
 <% include header %>
 <% if (entries.length) { %>
 <% entries.forEach(function(entry) { %>
+<% entry %>
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="text-muted pull-right">
-<%= entry.published %>
+ <div><%= entry.published %> </div>
+ <div class=" pull-right"><a href="/edit/<%= entry.id %>" class="btn">Edit</a></div>
 </div>
 <%= entry.title %>
 </div>
